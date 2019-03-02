@@ -7,7 +7,6 @@ function setup() {
 
   //default camera setting
   camera(0, 0, (windowHeight / 2) / tan(PI * 30 / 180), 0, 0, 0, 0, 1, 0);
-  //ortho(-width / 2, width / 2, -height / 2, height / 2, 0, 50000);
 
   pg = createGraphics(windowWidth, windowHeight);
   pg.colorMode(HSB, 360, 100, 100, 100);
@@ -49,10 +48,6 @@ function scene1() {
   pg.noFill();
   pg.rect(0, 0, windowWidth, windowHeight);
 
-  //line
-  // pg.line(0, windowHeight / 2, windowWidth, windowHeight / 2);//x
-  // pg.line(windowWidth / 2, 0, windowWidth / 2, windowHeight);//y
-
   //text
   pg.textAlign(LEFT, BOTTOM);
   pg.strokeWeight(5);
@@ -78,8 +73,6 @@ function scene1() {
     easing(0, windowHeight, 75, 20),
     easing(0, windowHeight / 2, 78, 20),
     (windowHeight / 2) / tan(PI * 30 / 180),
-    // easing(0, -windowWidth + textX_padding * 3, 80, 70, "inout"),
-    // easing(0, -windowHeight + textY_padding + textY * 3 + 35, 80, 70, "inout"),
     easing(0, -windowWidth / 2 + textX_padding / 2 + 32, 115, 70, "inout"),
     easing(0, -windowHeight / 2 + textY_padding - 75, 120, 70, "inout"),
     0,
